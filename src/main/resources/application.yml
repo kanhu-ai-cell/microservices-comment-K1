@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: COMMENT-SERVICE
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/micro-commentDb
+    username: postgres
+    password: test
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+server:
+  port: 8082
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
